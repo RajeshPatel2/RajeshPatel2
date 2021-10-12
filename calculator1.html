@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="answer" id="answer1">
+        <div>
+            <input type="button" value="7" onclick="answer.value=answer.value+7" />
+            <input type="button" value="8" onclick="answer.value=answer.value+8" />
+            <input type="button" value="9" onclick="answer.value=answer.value+9" />
+            <input type="button" value="/" onclick="divison()" />
+        </div>
+        <div>
+            <input type="button" value="6" onclick="answer.value=answer.value+6" />
+            <input type="button" value="5" onclick="answer.value=answer.value+5" />
+            <input type="button" value="4" onclick="answer.value=answer.value+4" />
+            <input type="button" value="*" onclick="mul()" />
+        </div>
+        <div>
+            <input type="button" value="3" onclick="answer.value=answer.value+3" />
+            <input type="button" value="2" onclick="answer.value=answer.value+2" />
+            <input type="button" value="1" onclick="answer.value=answer.value+1" />
+            <input type="button" value="-" onclick="sub()" />
+        </div>
+        <div>
+            <input type="button" value="." onclick="answer.value=answer.value+'.'" />
+            <input type="button" value="0" onclick="answer.value=answer.value+0" />
+            <input type="button" value="=" onclick="equal()" />
+            <input type="button" value="+" onclick="add()" />
+        </div>
+        <div>
+            <input type="button" value="clear" onclick="answer.value=''" />
+        </div>
+    </form>
+
+    <script>
+        var previousValue = "";
+        var operator = "";
+        var currentValue = "";
+
+
+        function add() {
+            previousValue = document.getElementById('answer1').value;
+            operator = '+';
+            document.getElementById('answer1').value = " ";
+        }
+        function sub() {
+            previousValue = document.getElementById('answer1').value;
+            operator = '-';
+            document.getElementById('answer1').value = " ";
+        }
+        function mul() {
+            previousValue = document.getElementById('answer1').value;
+            operator = '*';
+            document.getElementById('answer1').value = " ";
+        }
+        function divison() {
+            previousValue = document.getElementById('answer1').value;
+            operator = '/';
+            document.getElementById('answer1').value = " ";
+        }
+        function equal() {
+            currentValue = document.getElementById('answer1').value;
+            document.getElementById('answer1').value = eval(previousValue + operator + currentValue);
+
+        }
+    </script>
+</body>
+
+</html>
