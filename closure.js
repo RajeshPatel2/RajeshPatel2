@@ -10,8 +10,6 @@ function f1(){
 f1();
 */
 
-
-
 /*
 Nested Function
 function f1(){
@@ -34,9 +32,6 @@ function f1(){
 
 f1();
 */
-
-
-
 
 /*
 Local Access
@@ -64,8 +59,6 @@ function f1(){
 
 f1();
 */
-
-
 
 /*
 Captured Variables
@@ -97,8 +90,6 @@ var f = f1();
 f();
 f();
 */
-
-
 
 /*
 Closure
@@ -149,10 +140,8 @@ v1();
 v2();
 */
 
-
-
-
 /*Multiple Closure*/
+/*
 var v = [];
 var counter = 0;
 function f1(a, b) {
@@ -201,3 +190,4 @@ v[3]();
 for (var x in v) {
   v[x]();
 }
+*/

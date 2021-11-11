@@ -326,7 +326,6 @@ console.log(obj3.f);
 console.log(obj1.w);
 */
 
-
 /*
 function deposit(amount) {
     this.balance = this.balance + amount;
@@ -377,12 +376,13 @@ pg2.statement();
 var obj1 = {
     a: 1,
     b: 2,
-    c: 3
+    c: 3,
+    sp1: { }
 };
 var obj2 = {
     d: 4,
     e: 5,
-    f: 6
+    f: {}
 
 };
 var obj3 = {
@@ -443,4 +443,3 @@ obj2.m1();
 obj1.m2();
 obj2.m2();
 */
-
